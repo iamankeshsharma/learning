@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { Aside } from "./components/aside/aside";
+
+
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -42,7 +45,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return <section className="w-full flex">
+    <Aside />
+    <Outlet />
+  </section>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

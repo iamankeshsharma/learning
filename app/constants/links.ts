@@ -1,7 +1,7 @@
 export const navLinks = [
     {
         Icon:"",
-        href:"/home",
+        href:"/",
         text:"Home",
         description:""
     },
