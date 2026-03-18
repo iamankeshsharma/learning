@@ -47,7 +47,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return <section className="w-full flex">
     <Aside />
-    <Outlet />
+    <section className="w-full h-full p-10">
+      <Outlet />
+    </section>
   </section>;
 }
 
