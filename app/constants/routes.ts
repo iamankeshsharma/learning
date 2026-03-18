@@ -9,7 +9,7 @@ export const ROUTES = {
     },
     'blog':{
         href:"/blog",
-        component:"routes/blog.tsx"
+        component:"routes/Blog/index.tsx"
     },
     'contact':{
         href:"/contact",
