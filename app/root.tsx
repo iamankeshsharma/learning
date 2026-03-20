@@ -5,9 +5,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation,
 } from "react-router";
 
 import { Aside } from "./components/aside/aside";
+import { GlobalSpinner } from "./components/globalSpinner/GlobalSpinner";
 
 
 import type { Route } from "./+types/root";
@@ -45,12 +47,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <section className="w-full flex">
-    <Aside />
-    <section className="w-full h-full p-10">
-      <Outlet />
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
+
+  return <>
+    {isNavigating && <GlobalSpinner/>}
+    <section className="w-full flex">
+      <Aside />
+      <section className="w-full h-full p-10">
+        <Outlet />
+      </section>
     </section>
-  </section>;
+    
+  </>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
