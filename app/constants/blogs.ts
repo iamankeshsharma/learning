@@ -1,0 +1,27 @@
+export const BLOG_SLUGS = [
+    {
+        id:1,
+        title:'Blog 1',
+        slug:'blog-1',
+    },
+    {
+        id:2,
+        title:'Blog 2',
+        slug:'blog-2',
+    },
+    {
+        id:3,
+        title:'Blog 3',
+        slug:'blog-3',
+    },
+    {
+        id:4,
+        title:'Blog 4',
+        slug:'blog-4',
+    },
+    {
+        id:5,
+        title:'Blog 5',
+        slug:'blog-5',
+    },
+];

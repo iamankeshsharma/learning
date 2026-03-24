@@ -11,7 +11,8 @@ type loaderDataType = {
 
 // Server Loader
 export async function loader({ params }: Route.LoaderArgs){
-    return {data:"test"};
+    const data = await fetch(`${import.meta.env.VITE_API_BASE}/about`);
+    return data.json();
 }
 
 // Client loader
