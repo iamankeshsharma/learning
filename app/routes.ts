@@ -11,4 +11,5 @@ export default [
         index(ROUTES.blog.component),
         route(":slug", "routes/Blog/blog.tsx")
     ]),
+    route(ROUTES.pageNotFound.href, ROUTES.pageNotFound.component),
 ] satisfies RouteConfig;

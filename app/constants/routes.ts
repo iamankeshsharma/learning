@@ -14,5 +14,9 @@ export const ROUTES = {
     'contact':{
         href:"/contact",
         component:"routes/contact.tsx"
+    },
+    'pageNotFound':{
+        href: "*",
+        component:"routes/pageNotFound.tsx"
     }
 };
